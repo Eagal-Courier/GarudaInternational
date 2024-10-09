@@ -2,11 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const path = require("path");
-const fs = require("fs");
 
-const port = process.env.PORT || 3030;
 const routes = require("./routes/mainRoutes");
-require("./helpers/hbs.helper");
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
